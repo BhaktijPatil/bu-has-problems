@@ -1,6 +1,7 @@
 package destiny.bu;
 
 import destiny.bu.algorithms.MergeSortedArrays;
+import destiny.bu.algorithms.ValidParenthesis;
 
 import java.util.logging.Logger;
 
@@ -10,11 +11,10 @@ public class Main {
     public static void main(String... args) {
         long startTime = System.nanoTime();
 
-        MergeSortedArrays solution = new MergeSortedArrays();
-//        Object result = solution.merge(new int[]{1, 2, 3, 0, 0, 0}, 3, new int[]{2, 5, 6}, 3);
-        solution.merge(new int[]{1, 2, 3, 0, 0, 0}, 3, new int[]{2, 5, 6}, 3);
+        ValidParenthesis solution = new ValidParenthesis();
+        Object result = solution.isValid("()");
 
         long endTime = System.nanoTime();
-//        LOGGER.info("Execution | Success | Time to Run : " + (endTime - startTime) + " | Result : " + result);
+        LOGGER.info("Execution | Success | Time to Run : " + (endTime - startTime) + "ns | Result : " + result);
     }
 }
