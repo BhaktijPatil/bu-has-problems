@@ -48,5 +48,38 @@ nums is sorted in non-decreasing order.
  */
 
 public class RemoveDuplicatesFromArray {
-    
+
+    public int removeDuplicatesApproachTwo(int[] nums) {
+        int writeIndex = 2;
+        for (int readIndex = 2; readIndex < nums.length; readIndex++) {
+            if(nums[readIndex] != nums[writeIndex-2]) {
+                nums[writeIndex] = nums[readIndex];
+                writeIndex++;
+            }
+        }
+        return writeIndex;
+    }
+
+    public int removeDuplicates(int[] nums) {
+        int duplicateCount = 1;
+        int arrayLength = nums.length;
+        for (int i = 1; i < arrayLength; i++) {
+            if (nums[i] == nums[i - 1]) {
+                duplicateCount++;
+            } else {
+                if (duplicateCount > 2) {
+                    for (int j = i; j < arrayLength; j++) {
+                        nums[j - duplicateCount + 2] = nums[j];
+                    }
+                    arrayLength -= (duplicateCount - 2);
+                    i -= (duplicateCount - 2);
+                }
+                duplicateCount = 1;
+            }
+        }
+        if (duplicateCount > 2) {
+            arrayLength -= (duplicateCount - 2);
+        }
+        return arrayLength;
+    }
 }
