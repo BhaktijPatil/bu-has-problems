@@ -1,7 +1,6 @@
 package destiny.bu;
 
-import destiny.bu.algorithms.MergeSortedArrays;
-import destiny.bu.algorithms.ValidParenthesis;
+import destiny.bu.problems.SearchInsertPosition;
 
 import java.util.logging.Logger;
 
@@ -11,8 +10,11 @@ public class Main {
     public static void main(String... args) {
         long startTime = System.nanoTime();
 
-        ValidParenthesis solution = new ValidParenthesis();
-        Object result = solution.isValid("()");
+//        PascalsTriangle solution = new PascalsTriangle();
+//        Object result = solution.getRow(33);
+
+        SearchInsertPosition solution = new SearchInsertPosition();
+        Object result = solution.searchInsert(new int[]{2, 7, 8, 9, 10}, 9);
 
         long endTime = System.nanoTime();
         LOGGER.info("Execution | Success | Time to Run : " + (endTime - startTime) + "ns | Result : " + result);

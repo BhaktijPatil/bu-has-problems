@@ -1,4 +1,4 @@
-package destiny.bu.data.structures;
+package destiny.bu.problems;
 
 /*
 Design a HashMap without using any built-in hash table libraries.
