@@ -1,6 +1,7 @@
 package destiny.bu;
 
 import destiny.bu.problems.BuyAndSellStock;
+import destiny.bu.problems.RomanToInteger;
 
 import java.util.logging.Logger;
 
@@ -24,8 +25,11 @@ public class Main {
 //        int[] array = {1, 2, 3, 4, 5, 6, 7};
 //        solution.rotate(array, 3);
 
-        BuyAndSellStock solution = new BuyAndSellStock();
-        Object result = solution.maxProfit(new int[]{1, 4, 2});
+//        BuyAndSellStock solution = new BuyAndSellStock();
+//        Object result = solution.maxProfit(new int[]{1, 4, 2});
+
+        RomanToInteger solution = new RomanToInteger();
+        Object result = solution.romanToIntApproachTwo("MCMXCIV");
 
         long endTime = System.nanoTime();
         LOGGER.info("Execution | Success | Time to Run : " + (endTime - startTime) + "ns | Result : " + result);
