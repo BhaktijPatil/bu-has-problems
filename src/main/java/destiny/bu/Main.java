@@ -1,8 +1,8 @@
 package destiny.bu;
 
-import destiny.bu.problems.BuyAndSellStock;
-import destiny.bu.problems.RomanToInteger;
+import destiny.bu.online.tests.Result;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 public class Main {
@@ -11,25 +11,8 @@ public class Main {
     public static void main(String... args) {
         long startTime = System.nanoTime();
 
-//        PascalsTriangle solution = new PascalsTriangle();
-//        Object result = solution.getRow(33);
-
-//        SearchInsertPosition solution = new SearchInsertPosition();
-//        Object result = solution.searchInsert(new int[]{2, 7, 8, 9, 10}, 9);
-
-//        RemoveDuplicatesFromArrayTwo solution = new RemoveDuplicatesFromArrayTwo();
-//        int[] array = {0, 0, 1};
-//        Object result = solution.removeDuplicates(array) + " " + Arrays.toString(array);
-
-//        RotateArray solution = new RotateArray();
-//        int[] array = {1, 2, 3, 4, 5, 6, 7};
-//        solution.rotate(array, 3);
-
-//        BuyAndSellStock solution = new BuyAndSellStock();
-//        Object result = solution.maxProfit(new int[]{1, 4, 2});
-
-        RomanToInteger solution = new RomanToInteger();
-        Object result = solution.romanToIntApproachTwo("MCMXCIV");
+//        Object result = Result.getScoreDifference(List.of(3, 6, 2, 3, 5));
+        Object result = Result.maxProfit(1, 10, List.of(30, 59, 110));
 
         long endTime = System.nanoTime();
         LOGGER.info("Execution | Success | Time to Run : " + (endTime - startTime) + "ns | Result : " + result);
