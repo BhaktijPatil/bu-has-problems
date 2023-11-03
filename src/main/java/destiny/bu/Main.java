@@ -11,7 +11,6 @@ public class Main {
     public static void main(String... args) {
         long startTime = System.nanoTime();
 
-//        Object result = Result.getScoreDifference(List.of(3, 6, 2, 3, 5));
         Object result = Result.maxProfit(1, 10, List.of(30, 59, 110));
 
         long endTime = System.nanoTime();
