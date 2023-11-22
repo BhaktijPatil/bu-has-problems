@@ -21,7 +21,7 @@ Output: [-1]
  */
 
 public class ConstructBTreeFromTraversals {
-    
+
     // PREORDER - NODE LEFT RIGHT
     // INORDER - LEFT NODE RIGHT
 
